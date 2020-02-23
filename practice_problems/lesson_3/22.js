@@ -1,4 +1,5 @@
 function rot13(string) {
+  var rotation = 13;
   var newString = '';
   var char;
   var rotatedChar;
@@ -8,29 +9,30 @@ function rot13(string) {
   for (i = 0; i < string.length; i += 1) {
     char = string[i];
 
-    if (char.match(/[^a-zA-Z]/)) {
+    if (char.match(/[A-Z]/)) {
+      offset = 'A'.charCodeAt(0);
+    } else if (char.match(/[a-z]/)) {
+      offset = 'a'.charCodeAt(0);
+    } else {
       newString += char;
       continue;
-    } else if (char.match(/[a-z]/)) {
-      offset = 97;
-    } else {
-      offset = 65;
     }
 
-    rotatedChar = rotateCharBy13(char, offset);
+    rotatedChar = rotateChar(char, offset, rotation);
     newString += rotatedChar;
   }
 
   return newString;
 }
 
-function rotateCharBy13(char, offset) {
+function rotateChar(char, offset, rotation) {
+  var NUMBER_OF_LETTERS = 26;
   var initialCharCode;
   var rotatedCharCode;
   var rotatedChar;
 
   initialCharCode = char.charCodeAt(0);
-  rotatedCharCode = (initialCharCode - offset + 13) % 26 + offset;
+  rotatedCharCode = (initialCharCode - offset + rotation) % NUMBER_OF_LETTERS + offset;
   rotatedChar     = String.fromCharCode(rotatedCharCode);
 
   return rotatedChar;
