@@ -1,6 +1,6 @@
-var array1 = ['Moe', 'Larry', 'Curly', 'Chemp', 'Harpo', 'Chico', 'Groucho', 'Zeppo'];
-var array2 = [];
-var i;
+const array1 = ['Moe', 'Larry', 'Curly', 'Chemp', 'Harpo', 'Chico', 'Groucho', 'Zeppo'];
+const array2 = [];
+let i;
 
 for (i = 0; i < array1.length; i += 1) {
   array2.push(array1[i]);

@@ -1,0 +1,26 @@
+{
+  "name": "210",
+  "version": "1.0.0",
+  "description": "",
+  "main": "draft.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsiny/210_fundamentals_of_javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsiny/210_fundamentals_of_javascript/issues"
+  },
+  "homepage": "https://github.com/jsiny/210_fundamentals_of_javascript#readme",
+  "dependencies": {
+    "eslint": "^6.8.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
