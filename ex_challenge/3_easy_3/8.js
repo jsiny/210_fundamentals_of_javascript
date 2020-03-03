@@ -1,23 +1,11 @@
 function swapWord(word) {
-  const firstChar = word[0];
-  const lastChar = word[word.length - 1];
-  const rest = word.slice(1, word.length - 1);
+  if (word.length === 1) return word;
 
-  return lastChar + rest + firstChar;
+  return word[word.length - 1] + word.slice(1, -1) + word[0];
 }
 
 function swap(sentence) {
-  let words = sentence.split(' ');
-
-  words = words.map((word) => {
-    if (word.length > 1) {
-      return swapWord(word);
-    } else {
-      return word;
-    }
-  });
-  
-  return words.join(' ');
+  return sentence.split(' ').map((word) => swapWord(word)).join(' ');
 }
 
 console.log(swap('Oh what a wonderful day it is'));  // "hO thaw a londerfuw yad ti si"
