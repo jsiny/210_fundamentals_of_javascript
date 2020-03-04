@@ -9,7 +9,7 @@ function splice(array, start, number) {
     array[i] = array[i + number];
   }
 
-  array.length = array.length - 5;
+  array.length = array.length - number;
   return removed;
 }
 
