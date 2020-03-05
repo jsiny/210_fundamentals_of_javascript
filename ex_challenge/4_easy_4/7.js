@@ -1,0 +1,5 @@
+function multiplyList(first, second) {
+  return first.map((n, i) => n * second[i]);
+}
+
+console.log(multiplyList([3, 5, 7], [9, 10, 11])); // [27, 50, 77]
