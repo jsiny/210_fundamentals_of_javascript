@@ -58,6 +58,8 @@ mental model:
 
 */
 
+
+
 function spaceSequence(rows) {
   const start = (rows - 7) / 2 + 2;
   const sequence = [];
